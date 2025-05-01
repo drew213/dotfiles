@@ -15,3 +15,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Starship prompt
 eval "$(starship init zsh)"
+source ~/aliases.zsh

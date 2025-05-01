@@ -50,18 +50,6 @@ sudo systemctl enable --now postgresql
 sudo dnf install -y redis
 sudo systemctl enable --now redis
 
-# MongoDB repo
-sudo tee /etc/yum.repos.d/mongodb-org.repo <<EOF
-[mongodb-org-7.0]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/7.0/x86_64/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-7.0.asc
-EOF
-sudo dnf install -y mongodb-org
-sudo systemctl enable --now mongod
-
 # RabbitMQ
 sudo dnf install -y erlang socat
 sudo dnf install -y https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.7/rabbitmq-server-3.12.7-1.el8.noarch.rpm
